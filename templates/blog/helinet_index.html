@@ -1,0 +1,613 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>حلی نت</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" " />
+    <meta name="keywords" content="" />
+    <meta content="Pichforest" name="author" />
+
+
+
+    <link rel="shortcut icon" href="{% static 'images/logo_dark.png'%}">
+
+
+    <!-- Bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css" id="bootstrap-style" />
+
+    <!-- Material Icon Css -->
+    <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css'%}" type="text/css" />
+
+    <!-- Unicon Css -->
+    <link rel="stylesheet" href="{% static 'css/line.css'%}" />
+
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="{% static 'css/tiny-slider.css'%}" type="text/css" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="{% static 'css/style.min.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/rtl.css'%}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/font.css'%}" type="text/css" />
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71" data-layout-mode="dark">
+
+<!-- light-dark mode button -->
+<a href="javascript: void(0);" id="mode" class="mode-btn text-white rounded-end">
+    <i class="uil uil-brightness mode-dark mx-auto"></i>
+    <i class="uil uil-moon bx-spin mode-light"></i>
+</a>
+
+<!--Navbar Start-->
+<nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+    <div class="container-fluid custom-container">
+        <a class="navbar-brand logo f-30 text-dark fw-bold" href="http://127.0.0.1:8000">
+            <img src="{% static 'images/logo.png'%}" class="logo-dark" alt="" height="50"><span style="margin: 5px"  class="logo-dark">حلّی‌نـت</span>
+            <img src="{% static 'images/logo_dark.png'%}"  class="logo-light" alt="" height="50"><span  style="margin: 5px" class="logo-light">حلّی‌نـت</span>
+        </a>
+        <div>
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto navbar-center">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">صفحه اصلی</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">وبلاگ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">تماس با ما</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">درباره ما</a>
+                </li>
+
+            </ul>
+            <!--end navbar-nav-->
+
+            <a href="" class="btn btn-outline-primary">اطلاع از اخبار</a>
+
+        </div>
+
+    </div>
+    <!--end container-->
+</nav>
+<nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+    <div class="container-fluid custom-container">
+        <a class="navbar-brand logo f-30 text-dark fw-bold" href="http://127.0.0.1:8000">
+            <img src="{% static 'images/logo.png'%}" class="logo-dark" alt="" height="50"><span style="margin: 5px"  class="logo-dark">حلّی‌نـت</span>
+            <img src="{% static 'images/logo_dark.png'%}"  class="logo-light" alt="" height="50"><span  style="margin: 5px" class="logo-light">حلّی‌نـت</span>
+        </a>
+        <div>
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mx-auto navbar-center">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">صفحه اصلی</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">وبلاگ</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">تماس با ما</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="http://127.0.0.1:8000/blog" class="nav-link">درباره ما</a>
+                </li>
+
+            </ul>
+            <!--end navbar-nav-->
+
+            <a href="" class="btn btn-outline-primary">اطلاع از اخبار</a>
+
+        </div>
+
+    </div>
+    <!--end container-->
+</nav>
+<!-- Navbar End -->
+
+<!-- start home -->
+
+    <!-- start cta -->
+
+    <section class="cta section " style="margin-top: 80px;">
+        <!-- start container -->
+        <div class="container">
+            <div class="row align-items-center justify-content-start">
+                <div class="col-lg-6">
+                    <h1 class="text-white display-5 fw-bold">مقالات بروز دنیای تکنولوژی</h1>
+                    <p class="text-light f-16 mt-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                        و برای شرایط فعلی تکنولوژی</p>
+                    <a href="#collections" class="btn btn-primary mt-3">مشاهده مطالب</a>
+                </div>
+                <div class="col-lg-4 offset-lg-2">
+                    <img src="images/virtual.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end cta -->
+
+
+
+    <!-- start slider-blog -->
+    <section class=" blog-slider slider4 section bg-light" id="collections">
+        <!-- start container -->
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold">آخرین مطالب وبلاگ</h2>
+                    <p class="text-muted">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای
+                        شرایط فعلی تکنولوژی</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="client-slider position-relative mt-5">
+                        <div class="item">
+                            <div class="card">
+                                <div class="blog-slider-image position-relative">
+                                    <img src="/{{post.image}}" alt="" class="img-fluid">
+                                </div>
+                                <div class="mt-3" >
+                                    <h5 class="fw-bold">{{post.title}}</h5>
+
+                                    <div class="d-flex align-items-center justify-content-start mt-3">
+                                        <div>
+                                            <h6 class="mb-0 ms-2 text-muted">{{post.body}}</h6>
+                                        </div>
+                                    </div>
+                                    <hr class="my-3">
+
+                                    <div class="blog-slider-footer">
+                                        <h6 class="f-14"><i
+                                                class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>{{post.author}}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slider item 
+                    </div>
+                    <!-- End slider -->
+                </div>
+            </div>
+
+            <!-- cta section -->
+            <section class="section cta-2" style="margin-top: 60px">
+                <div class="container">
+                    <div class="cta-box">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="cta-content" style="@media only screen and (max-width: 479px)  {
+                                    font-size: 60px;
+
+                                    }">
+                                    <h1 class="text-white">آموزش پروژه‌ محور <br><span>بـرنامـه ‌نویسـی</span>
+                                        وب</h1>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="cta-image">
+                                    <img src="images/programmer2.png" width="70%" alt="" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end cta -->
+
+
+            <!-- start explore -->
+            <section class="explore section bg-light px-4" id="explore">
+                <!-- start container -->
+                <div class="container" style="margin-top: -150px">
+                    <div class="row position-relative">
+                        <div class="col-lg-12 p-0">
+                            <nav class="mt-5">
+                                <div class="heading float-end mt-3">
+                                    <h2 class="fw-bold">آرشیو مطالب</h2>
+                                </div>
+
+                                <div class="nav nav-tabs align-items-center justify-content-center row" id="nav-tab"
+                                     role="tablist">
+                                    <button class="nav-link active text-uppercase col-md-2" id="nav-all-tab"
+                                            data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab"
+                                            aria-controls="nav-all" aria-selected="true"><span class="icon"><i
+                                                class="mdi mdi-plus f-24 align-middle"></i>همه</span></button>
+
+                                    <button class="nav-link text-uppercase col-md-2" id="nav-games-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#nav-games" type="button" role="tab"
+                                            aria-controls="nav-games"
+                                            aria-selected="true"><span class="icon"> <i
+                                                class="mdi mdi-gamepad-variant f-24 align-middle"></i>بازی ها</span>
+                                    </button>
+
+                                    <button class="nav-link text-uppercase col-md-2" id="nav-art-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#nav-art" type="button" role="tab" aria-controls="nav-art"
+                                            aria-selected="true"><span class="icon"><i
+                                                class="mdi mdi-brush f-24 align-middle"></i>هنر</span></button>
+
+                                    <button class="nav-link text-uppercase col-md-2" id="nav-memes-tab"
+                                            data-bs-toggle="tab"
+                                            data-bs-target="#nav-memes" type="button" role="tab"
+                                            aria-controls="nav-memes"
+                                            aria-selected="true"><span class="icon"><i
+                                                class="mdi mdi-panda f-24 align-middle"></i>میم</span></button>
+
+                                    <button class="nav-link text-uppercase col-md-2" id="nav-Collection-tab"
+                                            data-bs-toggle="tab" data-bs-target="#nav-Collection" type="button"
+                                            role="tab"
+                                            aria-controls="nav-Collection" aria-selected="true"><span class="icon"><i
+                                                class="mdi mdi-collage f-24 align-middle"></i>مجموعه</span></button>
+                                </div>
+                            </nav>
+                        </div>
+                        {% if tag %}
+                        <h5>پست ها با تگ {{tag}}</h5>
+                        
+                        {% endif %}
+                        
+                        <div class="tab-content mt-5 pt-4" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
+                                 aria-labelledby="nav-all-tab">
+                                <div class="row">
+                                    
+
+
+
+                                    {% for singlePost in posts %}
+
+
+                                    <div class="col-lg-3 mt-4">
+                                        <div class="tab-content p-4 border-0">
+                                            
+                                            <div class="card-image mt-3">
+                                                <img src="/{{singlePost.image}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="body-content mt-3">
+                                                <h6 class="fw-bold" style="text-align: center !important;direction: rtl;">{{singlePost.title}}</h6>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h6 class="mb-0 ms-2 text-muted">{{singlePost.body|slice:":20"}}...</h6><br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex mt-3 align-items-center">
+                                                    <div class="history">
+                                                        <i class="mdi mdi-pen text-primary f-20 align-middle"></i>{{singlePost.author}}
+                                                    </div>
+                                                    <div class="bid-button ms-auto">
+                                                        <a href="{{singlePost.get_absolute_url}}" class="btn btn-sm btn-primary rounded-pill">مشاهده
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+
+                                    <div class="mt-5">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-white text-dark shadow"><i
+                                                        class="mdi mdi-restart f-18 align-middle"></i>مشاهده تمام مورد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-games" role="tabpanel" aria-labelledby="nav-games-tab">
+                                <div class="row">
+
+
+                                    <div class="col-lg-3 mt-4">
+                                        <div class="tab-content p-4 border-0">
+                                            
+                                            <div class="card-image mt-3">
+                                                <img src="images/explore/img-1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="body-content mt-3">
+                                                <h6 class="fw-bold" style="text-align: center !important;direction: rtl;">ده مزیت فریمورک لاراول بر پایه زبان توسعه پذیر php</h6>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h6 class="mb-0 ms-2 text-muted">لورم ایپسوم متنی است که ...</h6><br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex mt-3 align-items-center">
+                                                    <div class="history">
+                                                        <i class="mdi mdi-pen text-primary f-20 align-middle"></i> کامران کاظمی
+                                                    </div>
+                                                    <div class="bid-button ms-auto">
+                                                        <button class="btn btn-sm btn-primary rounded-pill">مشاهده
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div class="mt-5">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-white text-dark shadow"><i
+                                                        class="mdi mdi-restart f-18 align-middle"></i>مشاهده تمام مورد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-art" role="tabpanel" aria-labelledby="nav-art-tab">
+                                <div class="row">
+                                    
+                                    
+                                    <div class="col-lg-3 mt-4">
+                                        <div class="tab-content p-4 border-0">
+                                            
+                                            <div class="card-image mt-3">
+                                                <img src="images/explore/img-1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="body-content mt-3">
+                                                <h6 class="fw-bold" style="text-align: center !important;direction: rtl;">ده مزیت فریمورک لاراول بر پایه زبان توسعه پذیر php</h6>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h6 class="mb-0 ms-2 text-muted">لورم ایپسوم متنی است که ...</h6><br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex mt-3 align-items-center">
+                                                    <div class="history">
+                                                        <i class="mdi mdi-pen text-primary f-20 align-middle"></i> کامران کاظمی
+                                                    </div>
+                                                    <div class="bid-button ms-auto">
+                                                        <button class="btn btn-sm btn-primary rounded-pill">مشاهده
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="mt-5">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-white text-dark shadow"><i
+                                                        class="mdi mdi-restart f-18 align-middle"></i>مشاهده تمام مورد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-memes" role="tabpanel" aria-labelledby="nav-memes-tab">
+                                <div class="row">
+                                    
+
+
+                                    <div class="col-lg-3 mt-4">
+                                        <div class="tab-content p-4 border-0">
+                                            
+                                            <div class="card-image mt-3">
+                                                <img src="images/explore/img-1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="body-content mt-3">
+                                                <h6 class="fw-bold" style="text-align: center !important;direction: rtl;">ده مزیت فریمورک لاراول بر پایه زبان توسعه پذیر php</h6>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h6 class="mb-0 ms-2 text-muted">لورم ایپسوم متنی است که ...</h6><br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex mt-3 align-items-center">
+                                                    <div class="history">
+                                                        <i class="mdi mdi-pen text-primary f-20 align-middle"></i> کامران کاظمی
+                                                    </div>
+                                                    <div class="bid-button ms-auto">
+                                                        <button class="btn btn-sm btn-primary rounded-pill">مشاهده
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-white text-dark shadow"><i
+                                                        class="mdi mdi-restart f-18 align-middle"></i>مشاهده تمام مورد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-Collection" role="tabpanel"
+                                 aria-labelledby="nav-Collection-tab">
+                                <div class="row">
+                                    <div class="col-lg-3 mt-4">
+                                        <div class="tab-content p-4 border-0">
+                                            
+                                            <div class="card-image mt-3">
+                                                <img src="images/explore/img-1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="body-content mt-3">
+                                                <h6 class="fw-bold" style="text-align: center !important;direction: rtl;">ده مزیت فریمورک لاراول بر پایه زبان توسعه پذیر php</h6>
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h6 class="mb-0 ms-2 text-muted">لورم ایپسوم متنی است که ...</h6><br>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="d-flex mt-3 align-items-center">
+                                                    <div class="history">
+                                                        <i class="mdi mdi-pen text-primary f-20 align-middle"></i> کامران کاظمی
+                                                    </div>
+                                                    <div class="bid-button ms-auto">
+                                                        <button class="btn btn-sm btn-primary rounded-pill">مشاهده
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-5" style="padding-bottom: -50px">
+                                        <div class="col-lg-12">
+                                            <div class="text-center">
+                                                <button class="btn btn-white text-dark shadow"><i
+                                                        class="mdi mdi-restart f-18 align-middle"></i>مشاهده تمام مورد
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end container -->
+            </section>
+            <!-- end explore -->
+
+
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end slider-blog -->
+
+<!-- end home -->
+
+
+
+<!-- start footer -->
+<section class="footer">
+    <div class="container">
+        <div class="top-footer">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-info mt-4">
+
+                        <a class="logo f-30 text-dark fw-bold" href="http://127.0.0.1:8000">
+                            <img src="{% static 'images/logo.png'%}" class="logo-dark" alt="" height="50"><span class="logo-dark" style="margin: 5px"> حلّی‌نـت</span>
+                            <img src="{% static 'images/logo_dark.png'%}" class="logo-light" alt="" height="50"><span class="logo-light" style="color: white!important;margin: 5px"> حلّی‌نـت</span>
+                        </a>
+                        <p class="f-18 mt-2 text-muted">فرصت های تجاری مانند<br>اتوبوس ها، همیشه وجود دارد<br>یک آمدن
+                            ...</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <div class="mt-4">
+                                <h5 class="f-18 fw-bold">صفحات</h5>
+                                <ul class="list-unstyled footer-link mt-3">
+                                    <li><a href="http://127.0.0.1:8000/blog">وبلاگ</a></li>
+                                    <li><a href="">درباره ما</a></li>
+                                    <li><a href="">تماس با ما</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="mt-4 pl-0 pl-lg-4">
+                        <h5 class="f-18 fw-bold">ما را دنبال کنید</h5>
+                        <ul class="list-inline social-icons-list pt-3">
+                            <li class="list-inline-item">
+                                <a href="https://telegram.me/alinuxist"><i class="mdi mdi-telegram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/alinuxist"><i class="mdi mdi-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="my-4 text-muted">کلیه حقوق این سایت متعلق به <a style="color: #FC7300!important;" href="/">حلّی‌نـت</a>
+                        می‌باشد.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end footer -->
+
+
+
+
+
+
+<!--Bootstrap Js-->
+<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+
+<!-- Swiper Js -->
+<script src="{% static 'js/tiny-slider.js'%}"></script>
+
+<!-- counter -->
+<script src="{% static 'js/counter.init.js'%}"></script>
+
+<!-- App Js -->
+<script src="{% static 'js/app.js'%}"></script>
+
+
+
+
+</body>
+
+</html>

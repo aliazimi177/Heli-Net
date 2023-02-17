@@ -11,6 +11,8 @@ class EmailPostForm(forms.Form):
     name = forms.CharField(max_length=50)
     email = forms.EmailField()
     to = forms.EmailField()
+class Search(forms.Form):
+    search = forms.CharField(max_length=50)
 
         
     

@@ -1,533 +1,264 @@
-{% comment %} {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <title>حلی نت</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" " />
-    <meta name="keywords" content="" />
-    <meta content="Pichforest" name="author" />
-
-
-
-    <link rel="shortcut icon" href="{% static 'images/logo_dark.png'%}">
-</head>
-
-<body>
-    <center>
-    <h1>حلی نت</h1>
-    </center>
-    <h3>post title:{{post.title}}</h3>
-    <form method="POSt">
-        {% for field in forms%}
-        {% csrf_token %}
-      
-        <div class="row">
-          {{field.errors}}
-          {{field.label_tag}}<br>
-          {{field}}
-      
-        </div>
-        {% endfor %}
-        <input type="submit" value="send comment">
-      </form>
-</body> {% endcomment %}
-
-
-
+{% extends 'blog/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
 
-<head>
-    <meta charset="utf-8" />
-    <title>متاهنر - خرید و فروش اثر با NFT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" " />
-    <meta name="keywords" content="" />
-    <meta content="Pichforest" name="author" />
+    <!-- start section -->
+    <section class="artical section bg-light" style="margin-top: -50px;">
+        <!-- start container -->
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb default mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="index.html" class="text-muted">خانه</a>
+                            </li>
+                            <li class="breadcrumb-item active text-primary" aria-current="page">هنری</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
 
-    <link rel="shortcut icon" href="{% static 'images/logo_dark.png'%}">
 
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="blog-side-box mb-5 mb-lg-0">
 
-    <!-- Bootstrap css -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css" id="bootstrap-style" />
-
-    <!-- Material Icon Css -->
-    <link rel="stylesheet" href="{% static 'css/materialdesignicons.min.css'%}" type="text/css" />
-
-    <!-- Unicon Css -->
-    <link rel="stylesheet" href="{% static 'css/line.css'%}" />
-
-    <!-- Swiper Css -->
-    <link rel="stylesheet" href="{% static 'css/tiny-slider.css'%}" type="text/css" />
-
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="{% static 'css/style.min.css'%}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/rtl.css'%}" type="text/css" />
-    <link rel="stylesheet" href="{% static 'css/font.css'%}" type="text/css" />
-
-  </head>
-
-  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71" data-layout-mode="dark">
-
-    <!-- light-dark mode button -->
-    <a href="javascript: void(0);" id="mode" class="mode-btn text-white rounded-end">
-        <i class="uil uil-brightness mode-dark mx-auto"></i>
-        <i class="uil uil-moon bx-spin mode-light"></i>
-    </a>
-  
-  
-<!--Navbar Start-->
-<nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
-  <div class="container-fluid custom-container">
-      <a class="navbar-brand logo f-30 text-dark fw-bold" href="http://127.0.0.1:8000">
-          <img src="{% static 'images/logo.png'%}" class="logo-dark" alt="" height="50"><span style="margin: 5px"  class="logo-dark">حلّی‌نـت</span>
-          <img src="{% static 'images/logo_dark.png'%}"  class="logo-light" alt="" height="50"><span  style="margin: 5px" class="logo-light">حلّی‌نـت</span>
-      </a>
-      <div>
-          <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
-              <i class="mdi mdi-menu"></i>
-          </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mx-auto navbar-center">
-              <li class="nav-item">
-                  <a href="/" class="nav-link">صفحه اصلی</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">وبلاگ</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">تماس با ما</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">درباره ما</a>
-              </li>
-
-          </ul>
-          <!--end navbar-nav-->
-
-          <a href="" class="btn btn-outline-primary">اطلاع از اخبار</a>
-
-      </div>
-
-  </div>
-  <!--end container-->
-</nav>
-<nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
-  <div class="container-fluid custom-container">
-      <a class="navbar-brand logo f-30 text-dark fw-bold" href="http://127.0.0.1:8000">
-          <img src="{% static 'images/logo.png'%}" class="logo-dark" alt="" height="50"><span style="margin: 5px"  class="logo-dark">حلّی‌نـت</span>
-          <img src="{% static 'images/logo_dark.png'%}"  class="logo-light" alt="" height="50"><span  style="margin: 5px" class="logo-light">حلّی‌نـت</span>
-      </a>
-      <div>
-          <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-label="Toggle navigation">
-              <i class="mdi mdi-menu"></i>
-          </button>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mx-auto navbar-center">
-              <li class="nav-item">
-                  <a href="/" class="nav-link">صفحه اصلی</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">وبلاگ</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">تماس با ما</a>
-              </li>
-
-              <li class="nav-item">
-                  <a href="http://127.0.0.1:8000/blog" class="nav-link">درباره ما</a>
-              </li>
-
-          </ul>
-          <!--end navbar-nav-->
-
-          <a href="" class="btn btn-outline-primary">اطلاع از اخبار</a>
-
-      </div>
-
-  </div>
-  <!--end container-->
-</nav>
-<!-- Navbar End -->
-  
-  
-      <!-- start section -->
-      <section class="artical section bg-light" style="margin-top: -50px;">
-          <!-- start container -->
-          <div class="container">
-              <div class="row mt-4">
-                  <div class="col-lg-12">
-                      <nav aria-label="breadcrumb">
-                          <ol class="breadcrumb default mb-0">
-                              <li class="breadcrumb-item">
-                                  <a href="index.html" class="text-muted">خانه</a>
-                              </li>
-                              <li class="breadcrumb-item active text-primary" aria-current="page">هنری</li>
-                          </ol>
-                      </nav>
-                  </div>
-              </div>
-  
-  
-              <div class="row mt-5">
-                  <div class="col-lg-4">
-                      <div class="blog-side-box mb-5 mb-lg-0">
-  
-                          <div class="items">
-                              <a> پست را به اشتراک بگذارید</a>
-                          </div>
-  
-  
-                          <div class="items mt-4">
-                              <h6 class="fw-bold mb-3">متصل شویم</h6>
-                              <hr>
-                              <div class="title-bottom-border"></div>
-                              <div class="categorie-box mt-4">
-                                  <div class="d-flex">
-                                      <div class="you-tube">
-                                          <div class="avatar-sm align-items-center bg-danger">
-                                              <i class="mdi mdi-youtube f-30 text-white"></i>
-                                          </div>
-                                      </div>
-                                      <div class="facebook mx-3">
-                                          <div class="avatar-sm align-items-center bg-dark">
-                                              <i class="mdi mdi-facebook f-30 text-white"></i>
-                                          </div>
-                                      </div>
-                                      <div class="dribbble">
-                                          <div class="avatar-sm align-items-center bg-pink">
-                                              <i class="mdi mdi-instagram f-30 text-white"></i>
-                                          </div>
-                                      </div>
-                                      <div class="facebook mx-3">
-                                          <div class="avatar-sm align-items-center bg-blue">
-                                              <i class="mdi mdi-twitter f-30 text-white"></i>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-  
-                          <div class="items mt-4">
-                              <h6 class="fw-bold mb-3">دسته بندی ها</h6>
-                              <hr>
-                              <div class="title-bottom-border"></div>
-
-                              {% for i in category %}
-                              <div class="categorie-box mt-4">
-                                  <div class="d-flex align-items-center">
-                                      <h6 class="fw-semibold mb-0">{{i}}</h6>
-                                      <div class="ms-auto">
-                                          <span
-                                              class="badge rounded-pill shadow-sm text-dark py-2 px-3 f-18 fw-normal">425</span>
-                                      </div>
-                                  </div>
-                                  <hr class="my-2">
-                              </div>
-                              {% endfor %}
-                          </div>
-  
-  
-                          <div class="items mt-4">
-                              <h6 class="fw-bold mb-3">تگ</h6>
-                              <hr>
-                              <div class="title-bottom-border"></div>
-                              <div class="tag-box mt-4">
-                                {% for tag in tags %}
-                                  <a href="{% url 'index' tag.slug %}">
-                                  <span class="badge">{{tag}}</span>
-                                  </a>
-                                {% endfor %}
-                              </div>
-                          </div>
-  
-  
-                      </div>
-                  </div>
-  
-  
-                  <div class="col-lg-8">
-                      <div class="artical-box">
-                          <div class="artical-image">
-                              <img src="/{{post.image}}" alt="" class="img-fluid">
-                          </div>
-                          <div class="artical-title mt-4">
-                              <h1 class="fw-bold display-5">{{post.title}}</h1>
-                          </div>
-  
-                          <div class="artical-content mt-5">
-                              <div class="d-flex align-items-center">
-                                  <div class="d-flex align-items-center">
-                                      <div class="flex-shrink-0">
-                                      </div>
-                                      <div class="flex-grow-1 ms-3">
-                                          <h6 class="mb-0 fw-bold">{{post.author}}</h6>
-                                          <p class="mb-0 text-muted">نویسنده</p>
-                                      </div>
-                                  </div>
-                                  <div class="date ms-auto">
-                                      <h6 class="mb-0 fw-bold text-muted">{{post.publish}}</h6>
-                                  </div>
-                              </div>
-  
-                              <p class="mt-4 text-muted">{{post.body}}</p>
-  
-                              
-                          </div>
-  
-  
-  
-  
-  
-                          
-                      </div>
-  
-                      <!-- <div class="comment-box mt-5">
-  
-                          <h4 class="fw-bold">نظر</h4>
-                          <div class="Comment-box-item">
-                              <div class="comment-item mt-4">
-                                  <div class="d-flex align-items-center">
-                                      <div class="d-flex align-items-center">
-                                          <div class="flex-shrink-0">
-                                              <div class="avatar">
-                                                  <img src="images/inner-image/user/img-3.jpg" alt=""
-                                                      class="img-fluid avatar-md rounded-circle">
-                                              </div>
-                                          </div>
-                                          <div class="flex-grow-1 ms-2">
-                                              <h6 class="mb-0">نیکو بیرامی</h6>
-                                          </div>
-                                      </div>
-                                      <div class="time ms-auto">
-                                          <h6>10 دقیقه ی قبل</h6>
-                                      </div>
-                                  </div>
-  
-                                  <div class="message-box mt-4">
-                                      <p class="text-muted mb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. .</p>
-                                      <a href="" class="text-blue">پاسخ</a>
-                                  </div>
-  
-  
-  
-  
-                                  
-                              </div>
-  
-  
-                          
-  
-                          </div>
-  
-  
-  
-  
-  
-  
-                          
-  
-  
-                          
-  
-                          
-  
-                      </div> -->
-                  </div>
-  
-              </div>
-  
-          </div>
-          <!-- end container -->
-      </section>
-
-        <section class="home section bg-light overflow-hidden">
-        <div class="container x">
-       <form method="POST" class="mt-2">
-        {% for field in forms %}
-        {% csrf_token %}
-        <div class="row">
-          {{field.label_tag}}
-          {{field}}
-        
-        </div>
-          {% endfor %}
-           <div   class= "submit_send_comment">
-        </div>
-        <br>
-        <hr>
-        <br>
-        <input type="submit" value="send comment">
-      </form>
-        </div>
-              <!-- end container -->
-          </section>
-
-          <section class="mb-5">
-            <div class="container">
-               <div class="row">
-                  <div class="col-lg-9">
-                     <article>
-                        <div class="content-single rounded p-3 mt-3">
-                        <div class="rounded p-3 mt-3">
-                           <div class="comments-box">
-                              
-                            {% for comments in comment %}
-                            
-                            <div class="cm-parent rounded bg-dark p-3 mb-3">
-                                 <div class="row">
-                                    <div class="col-1">
-                                       <img src="img/userAvatar.png" alt="">
-                                    </div>
-                                    <div class="col-11">
-                                       <p><span class="d-inline-block text-primary ps-2">{{comments.name}} :</span>{{comments.body}}</p>
-                                       <div class="text-start">
-                                          <span class="d-inline-block mt-2 py-1 text-info px-2">
-                                          <i class="bi bi-calendar2-event"></i> {{comments.updated}}
-                                          </span>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           {% endfor %}
+                        <div class="items">
+                            <a> پست را به اشتراک بگذارید</a>
                         </div>
-                    </article>
-                 </div>
-              </div>
-           </div>
-        </section>
-        
 
-        
-         <div class="scroll_top">
+
+                        <div class="items mt-4">
+                            <h6 class="fw-bold mb-3">متصل شویم</h6>
+                            <hr>
+                            <div class="title-bottom-border"></div>
+                            <div class="categorie-box mt-4">
+                                <div class="d-flex">
+                                    <div class="you-tube">
+                                        <div class="avatar-sm align-items-center bg-danger">
+                                            <i class="mdi mdi-youtube f-30 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="facebook mx-3">
+                                        <div class="avatar-sm align-items-center bg-dark">
+                                            <i class="mdi mdi-facebook f-30 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="dribbble">
+                                        <div class="avatar-sm align-items-center bg-pink">
+                                            <i class="mdi mdi-instagram f-30 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="facebook mx-3">
+                                        <div class="avatar-sm align-items-center bg-blue">
+                                            <i class="mdi mdi-twitter f-30 text-white"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="items mt-4">
+                            <h6 class="fw-bold mb-3">دسته بندی ها</h6>
+                            <hr>
+                            <div class="title-bottom-border"></div>
+
+                            {% for i in category %}
+                                <div class="categorie-box mt-4">
+                                    <div class="d-flex align-items-center">
+                                        <h6 class="fw-semibold mb-0">{{ i }}</h6>
+                                        <div class="ms-auto">
+                                          <span
+                                                  class="badge rounded-pill shadow-sm text-dark py-2 px-3 f-18 fw-normal">425</span>
+                                        </div>
+                                    </div>
+                                    <hr class="my-2">
+                                </div>
+                            {% endfor %}
+                        </div>
+
+
+                        <div class="items mt-4">
+                            <h6 class="fw-bold mb-3">تگ</h6>
+                            <hr>
+                            <div class="title-bottom-border"></div>
+                            <div class="tag-box mt-4">
+                                {% for tag in tags %}
+                                    <a href="{% url 'index' tag.slug %}">
+                                        <span class="badge">{{ tag }}</span>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-8">
+                    <div class="artical-box">
+                        <div class="artical-image">
+                            <img src="/{{ post.image }}" alt="" class="img-fluid">
+                        </div>
+                        <div class="artical-title mt-4">
+                            <h1 class="fw-bold display-5">{{ post.title }}</h1>
+                        </div>
+
+                        <div class="artical-content mt-5">
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h6 class="mb-0 fw-bold">{{ post.author }}</h6>
+                                        <p class="mb-0 text-muted">نویسنده</p>
+                                    </div>
+                                </div>
+                                <div class="date ms-auto">
+                                    <h6 class="mb-0 fw-bold text-muted">{{ post.publish }}</h6>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-muted">{{ post.body }}</p>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <!-- <div class="comment-box mt-5">
+
+                        <h4 class="fw-bold">نظر</h4>
+                        <div class="Comment-box-item">
+                            <div class="comment-item mt-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar">
+                                                <img src="images/inner-image/user/img-3.jpg" alt=""
+                                                    class="img-fluid avatar-md rounded-circle">
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-2">
+                                            <h6 class="mb-0">نیکو بیرامی</h6>
+                                        </div>
+                                    </div>
+                                    <div class="time ms-auto">
+                                        <h6>10 دقیقه ی قبل</h6>
+                                    </div>
+                                </div>
+
+                                <div class="message-box mt-4">
+                                    <p class="text-muted mb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. .</p>
+                                    <a href="" class="text-blue">پاسخ</a>
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div> -->
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end container -->
+    </section>
+
+    <section class="home section bg-light overflow-hidden">
+        <div class="container x">
+            <form method="POST" class="mt-2">
+                {% for field in forms %}
+                    {% csrf_token %}
+                    <div class="row">
+                        {{ field.label_tag }}
+                        {{ field }}
+
+                    </div>
+                {% endfor %}
+                <div class="submit_send_comment">
+                </div>
+                <br>
+                <hr>
+                <br>
+                <input type="submit" value="send comment">
+            </form>
+        </div>
+        <!-- end container -->
+    </section>
+
+    <section class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <article>
+                        <div class="content-single rounded p-3 mt-3">
+                            <div class="rounded p-3 mt-3">
+                                <div class="comments-box">
+
+                                    {% for comments in comment %}
+
+                                        <div class="cm-parent rounded bg-dark p-3 mb-3">
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="img/userAvatar.png" alt="">
+                                                </div>
+                                                <div class="col-11">
+                                                    <p><span
+                                                            class="d-inline-block text-primary ps-2">{{ comments.name }} :</span>{{ comments.body }}
+                                                    </p>
+                                                    <div class="text-start">
+                                          <span class="d-inline-block mt-2 py-1 text-info px-2">
+                                          <i class="bi bi-calendar2-event"></i> {{ comments.updated }}
+                                          </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    {% endfor %}
+                            </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="scroll_top">
             <span class="btn btn-info text-center text-light">
             <i class="bi bi-arrow-up"></i>
             </span>
-         </div>
-         <script src="js/jQuery.js"></script>
-         <script src="js/popper.js"></script>
-         <script src="js/bootstrap.js"></script>
-         <script src="js/owl.carousel.js"></script>
-         <script src="js/index.js"></script>
-         <script src="https://seo90.ir/downloads/category/html-theme/"></script>
+    </div>
+    <script src="js/jQuery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://seo90.ir/downloads/category/html-theme/"></script>
 
-        
-  
-    <!-- start footer -->
-    <section class="footer">
-      <div class="container">
-          <div class="top-footer">
-              <div class="row">
-                  <div class="col-lg-4">
-                      <div class="footer-info mt-4">
-                          <!-- <img src="images/inner-image/logo-dark.png" alt="" height="22"> -->
-                         <a class="logo f-30 text-dark fw-bold" href="index.html">
-                                  <img src="images/logo-dark.png" class="logo-dark" alt="" height="40">
-                                  <img src="images/logo-light.png" class="logo-light" alt="" height="40">
-                              </a>
-                          <p class="f-18 mt-2 text-muted">فرصت های تجاری مانند<br>اتوبوس ها، همیشه وجود دارد<br>یک میاید ....</p>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-5">
-                      <div class="row">
-  
-                          <div class="col-lg-6">
-                              <div class="mt-4">
-                                  <h5 class="f-18 fw-bold">سیاست ها</h5>
-                                  <ul class="list-unstyled footer-link mt-3">
-                                      <li><a href="">امنیت و حریم خصوصی</a></li>
-                                      <li><a href="">بازار</a></li>
-                                      <li><a href="">شرایط و ضولبط</a></li>
-                                      <li><a href="">مجموعه</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-  
-                          <div class="col-lg-6">
-                              <div class="mt-4">
-                                  <h5 class="f-18 fw-bold">شرکت</h5>
-                                  <ul class="list-unstyled footer-link mt-3">
-                                      <li><a href="index.html">خانه</a></li>
-                                      <li><a href="activity.html">صفحات</a></li>
-                                      <li><a href="blog.html">وبلاگ</a></li>
-                                      <li><a href="contact.html">مخاطب</a></li>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-  
-                  <div class="col-lg-3">
-                      <div class="mt-4 pl-0 pl-lg-4">
-                          <h5 class="f-18 fw-bold">ما را دنبال کنید</h5>
-                          <ul class="list-inline social-icons-list pt-3">
-                              <li class="list-inline-item">
-                                  <a href="#"><i class="mdi mdi-facebook"></i></a>
-                              </li>
-                              <li class="list-inline-item">
-                                  <a href="#"><i class="mdi mdi-twitter"></i></a>
-                              </li>
-                              <li class="list-inline-item">
-                                  <a href="#"><i class="mdi mdi-linkedin"></i></a>
-                              </li>
-                              <li class="list-inline-item">
-                                  <a href="#"><i class="mdi mdi-google-plus"></i></a>
-                              </li>
-                          </ul>
-                      </div>
-                  </div>
-              </div>
-          </div>
-  
-  
-          <hr>
-  
-          <div class="row">
-              <div class="col-12">
-                  <div class="text-center">
-                      <p class="my-4 text-muted">©
-                          <script>document.write(new Date().getFullYear())</script>آرت لینک . طراحی با <i
-                              class="mdi mdi-heart text-danger"></i>توسط<a href="https://themesdesign.in/"
-                              target="_blank" class="text-reset">طارحی قالب ها</a>.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- end footer -->
-  
-
-
-    <!--Bootstrap Js-->
-    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
-
-    <!-- Slider Js -->
-    <script src="{% static 'js/tiny-slider.js'%}"></script>
-    <script src="{% static 'js/swiper.min.js'%}"></script>
-
-    <!-- counter -->
-    <script src="{% static 'js/counter.init.js'%}"></script>
-
-    <!-- App Js -->
-    <script src="{% static 'js/app.js'%}"></script>
-
-
-</body>
-
-</html>
+{% endblock content %}

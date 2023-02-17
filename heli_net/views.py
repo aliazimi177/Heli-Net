@@ -14,3 +14,24 @@ def index(request,tag_slug=None):
     context = {"post":post,"posts":posts,"tag":tag}
     return render(request,"blog/helinet_index.html",context)
 
+def search(request):
+    if request.method == 'POST':
+        search = Search()
+    post = Post.objects.all()
+    return render(request,"blog/search.html",{'post':post,})
+
+
+def about_us(request):
+    return render(request, "blog/about_us.html")
+
+
+
+
+
+
+
+
+
+
+
+

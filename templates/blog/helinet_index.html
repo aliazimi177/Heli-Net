@@ -103,43 +103,43 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="fw-bold">آرشیو مطالب وبلاگ</h2>
-                    <p class="text-muted">آرشیو مطالب مجله آموزشی تـکـنـوبـویـز</p>
+                    <p class="text-muted">مجله اموزشی حلی نت </p>
                 </div>
             </div>
             <section class=" blog-4" style="padding-bottom: 20px;border-radius: 20px">
                 <!-- start container -->
                 <div class="container position-relative">
                     <div class="row">
-
+                        {% for post_1 in posts %}
                         <div class="col-lg-4 mt-4">
                             <div class="tab-content p-4 border-0">
                                 <div class="card-image mt-2 position-relative">
                                     <a href="http://127.0.0.1:8001/articles/3" target="_blank"><img
-                                            src="/upload/images/2023/February/9/20:16:26//androidparty.png" alt=""
+                                            src="{{post_1.image}}" alt=""
                                             class="img-fluid"></a>
                                     <div class="position-absolute top-0 end-0 me-3 mt-3">
                                 <span class="badge rounded-pill bg-white text-dark" title="زمان مطالعه">
-                                    <i class="mdi mdi-clock text-primary align-middle f-16"></i> 12 دقیقه
+                                    <i class="mdi mdi-clock text-primary align-middle f-16"></i> {{post_1.reading_time}} دقیقه 
                                 </span>
                                     </div>
                                 </div>
                                 <div class="body-content mt-3">
 
                                     <h5 id="singlePost" onclick="location.replace('http://127.0.0.1:8001/articles/3')"
-                                        style="cursor: pointer" class="fw-bold">jslakjdlfkj</h5>
+                                        style="cursor: pointer" class="fw-bold">{{post_1.title}}</h5>
                                     <div class="d-flex">
-                                        <h6 class="text-muted">jfasldkjdsl;fkj</h6>
+                                        <h6 class="text-muted">{{post_1.body}}</h6>
                                     </div>
                                     <br>
                                     <h6 title="دسته بندی" style="direction: ltr;"><i
-                                            class="mdi mdi-database text-primary"></i> python
+                                            class="mdi mdi-database text-primary"></i> {{post_1.category}}
                                     </h6>
                                     <hr>
                                     <div class="d-flex mt-3 align-items-center">
                                         <div class="history f-15">
                                             <h6 title="نویسنده" class="f-14"><i
-                                                    class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>KIArash
-                                                Maleki
+                                                    class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>{{post_1.author}}
+                                                
                                             </h6>
                                         </div>
                                         <div class="bid-button ms-auto">
@@ -152,50 +152,9 @@
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
 
-
-                        <div class="col-lg-4 mt-4">
-                            <div class="tab-content p-4 border-0">
-                                <div class="card-image mt-2 position-relative">
-                                    <a href="http://127.0.0.1:8001/articles/4" target="_blank"><img
-                                            src="/upload/images/2023/February/9/20:17:7//3243786.png" alt=""
-                                            class="img-fluid"></a>
-                                    <div class="position-absolute top-0 end-0 me-3 mt-3">
-                                <span class="badge rounded-pill bg-white text-dark" title="زمان مطالعه">
-                                    <i class="mdi mdi-clock text-primary align-middle f-16"></i> 5 دقیقه
-                                </span>
-                                    </div>
-                                </div>
-                                <div class="body-content mt-3">
-
-                                    <h5 id="singlePost" onclick="location.replace('http://127.0.0.1:8001/articles/4')"
-                                        style="cursor: pointer" class="fw-bold">fsjdalksdjfl;kj</h5>
-                                    <div class="d-flex">
-                                        <h6 class="text-muted">fsjadl;ksjdfl;kj</h6>
-                                    </div>
-                                    <br>
-                                    <h6 title="دسته بندی" style="direction: ltr;"><i
-                                            class="mdi mdi-database text-primary"></i> python
-                                    </h6>
-                                    <hr>
-                                    <div class="d-flex mt-3 align-items-center">
-                                        <div class="history f-15">
-                                            <h6 title="نویسنده" class="f-14"><i
-                                                    class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>KIArash
-                                                Maleki
-                                            </h6>
-                                        </div>
-                                        <div class="bid-button ms-auto">
-
-
-                                            <a class="btn btn-sm btn-primary rounded-pill"
-                                               href="http://127.0.0.1:8001/articles/4">مشاهده</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
 
 
                 </div>

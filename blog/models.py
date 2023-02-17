@@ -30,7 +30,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to="static/uploads/%Y-%m-%d %H:%M:%S", default="")
     tag = TaggableManager()
     category = models.CharField(max_length=50, default="", choices=CATEGORY)
-
+    reading_time = models.IntegerField(default=1)
     def __str__(self) -> str:
         return self.title
 

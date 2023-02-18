@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #my app 
     'blog.apps.BlogConfig',
+    #taggit
     'taggit',
+    #postgres
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +81,13 @@ WSGI_APPLICATION = 'heli_net.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'heli_net',
+        'USER': 'ali_heli_net',
+        'PASSWORD': 'heli_net',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
     }
 }
 

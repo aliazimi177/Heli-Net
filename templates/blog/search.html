@@ -4,12 +4,11 @@
 {% block content %}
     <div class="home-content-2 home-heading text-start" style="margin-top: 150px;text-align: center!important;">
         <h1 class="fw-bold  text-primary">جستجو بین مقالات</h1>
-        <form class="search-form" style="margin-top: 20px;margin-bottom: 20px;" method="post">
-            {% csrf_token %}
+        <form  method="GET" action="" class="search-form" style="margin-top: 20px;margin-bottom: 20px;">
             <div class="">
                 <center>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control " id="inputPassword" placeholder="جستجو در اینجا ...">
+                        <input type="text" class="form-control " id="inputPassword"  name='q' placeholder="جستجو در اینجا ...">
                         <div class=""><br>
                             <button type="submit" href="" class="btn btn-success" >جستجو <i class="mdi mdi-magnify"></i></button>
                         </div>
@@ -18,4 +17,59 @@
             </div>
         </form>
     </div>
+    <hr>
+    <br>
+    {% if query %}
+    <center>
+    <h1>نتایج جستجوی{{query}} </h1>
+    </center>
+    {% for out_come in out_comes %}
+    <div class="col-lg-4 mt-4">
+        <div class="tab-content p-4 border-0">
+            <div class="card-image mt-2 position-relative">
+                <a href="http://127.0.0.1:8001/articles/3" target="_blank"><img
+                        src="{{out_come.image}}" alt=""
+                        class="img-fluid"></a>
+                <div class="position-absolute top-0 end-0 me-3 mt-3">
+            <span class="badge rounded-pill bg-white text-dark" title="زمان مطالعه">
+                <i class="mdi mdi-clock text-primary align-middle f-16"></i> {{out_come.reading_time}} دقیقه 
+            </span>
+                </div>
+            </div>
+            <div class="body-content mt-3">
+
+                <h5 id="singlePost" onclick="location.replace('http://127.0.0.1:8001/articles/3')"
+                    style="cursor: pointer" class="fw-bold">{{out_come.title}}</h5>
+                <div class="d-flex">
+                    <h6 class="text-muted">{{out_come.body}}</h6>
+                </div>
+                <br>
+                <h6 title="دسته بندی" style="direction: ltr;"><i
+                        class="mdi mdi-database text-primary"></i> {{out_come.category}}
+                </h6>
+                <hr>
+                <div class="d-flex mt-3 align-items-center">
+                    <div class="history f-15">
+                        <h6 title="نویسنده" class="f-14"><i
+                                class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>{{out_come.author}}
+                            
+                        </h6>
+                    </div>
+                    <div class="bid-button ms-auto">
+
+
+                        <a class="btn btn-sm btn-primary rounded-pill"
+                           href="{{post_1.get_absolute_url}}">مشاهده</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        
+        {% endfor %}
+    
+    {% endif %}
+
 {% endblock content %}

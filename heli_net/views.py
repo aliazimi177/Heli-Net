@@ -4,7 +4,7 @@ from blog.forms import *
 from taggit.models import Tag
 from django.contrib.postgres.search import SearchVector
 def index(request,tag_slug=None):
-    posts = Post.objects.all()
+    posts = Post.objects.all()[:6]
     tag = None
     if tag_slug:
         tag = get_object_or_404(Tag,slug=tag_slug)

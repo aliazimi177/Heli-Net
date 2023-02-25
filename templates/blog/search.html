@@ -27,7 +27,7 @@
     <div class="col-lg-4 mt-4">
         <div class="tab-content p-4 border-0">
             <div class="card-image mt-2 position-relative">
-                <a href="http://127.0.0.1:8001/articles/3" target="_blank"><img
+                <a href="{{out_come.get_absolute_url}}" target="_blank"><img
                         src="{{out_come.image}}" alt=""
                         class="img-fluid"></a>
                 <div class="position-absolute top-0 end-0 me-3 mt-3">
@@ -59,7 +59,7 @@
 
 
                         <a class="btn btn-sm btn-primary rounded-pill"
-                           href="{{post_1.get_absolute_url}}">مشاهده</a>
+                           href="{{out_come.get_absolute_url}}">مشاهده</a>
                     </div>
                 </div>
             </div>

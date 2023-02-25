@@ -1,0 +1,73 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+<!-- start home -->
+{% block content %}
+
+
+<section style="padding-top: 150px;">
+    <div class="row text-center">
+        <div style="padding-left: 100px!important;padding-right: 100px!important;">
+            <h2 class="fw-bold">آرشیو مطالب</h2>
+            <p class="text-muted">آرشیو مطالب ارائه شده در سایت از ابتدا تا اکنون<p>
+        </div>
+    </div>
+    <section class=" blog-4" style="padding-bottom: 20px;border-radius: 20px">
+        <!-- start container -->
+        <div class="container position-relative">
+            <div class="row">
+                {% for post in posts %}
+                
+                    <div class="col-lg-4 mt-4">
+                        <div class="tab-content p-4 border-0">
+                            <div class="card-image mt-2 position-relative">
+                                <a href="{{post.get_absolute_url}}" target="_blank"><img src="/{{post.image}}" alt="" class="img-fluid"></a>
+                                <div class="position-absolute top-0 end-0 me-3 mt-3">
+                                <span class="badge rounded-pill bg-white text-dark" title="زمان مطالعه">
+                                    <i class="mdi mdi-clock text-primary align-middle f-16"></i> {{post.reading_time}}
+                                </span>
+                                </div>
+                            </div>
+                            <div class="body-content mt-3">
+                                
+                                <h5 id="singlePost" onclick="location.replace('')" style="cursor: pointer" class="fw-bold">{{post.title}}</h5>
+                                <div class="d-flex">
+                                    <h6 class="text-muted">{{post.body  }}</h6>
+                                </div>
+                                <br>
+                                <h6 title="دسته بندی" style="direction: ltr"><i
+                                        class="mdi mdi-database text-primary"></i> {{post.category}}
+                                </h6>
+                                <hr>
+                                <div class="d-flex mt-3 align-items-center">
+                                    <div class="history f-15">
+                                        <h6 title="نویسنده" class="f-14"><i
+                                                class="mdi mdi-pen f-18 text-primary me-2 align-middle"></i>{{post.author}}                                       </h6>
+                                    </div>
+                                    <div class="bid-button ms-auto">
+
+
+                                        <a class="btn btn-sm btn-primary rounded-pill" href="{{post.get_absolute_url}}" >مشاهده</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end blog -->
+<!-- end home -->
+{% endblock content %}

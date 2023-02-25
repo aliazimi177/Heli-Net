@@ -6,4 +6,5 @@ app_name = "blog"
 urlpatterns = [
     path("<slug:post>/", views.post_detail, name="post_detail"),
     path("<int:post_id>/share/",views.post_share,name="post_share"),
+    path("",views.weblog,name="weblog"),
 ]

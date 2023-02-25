@@ -19,7 +19,6 @@ def post_detail(request, post):
             new_comment = comment_form.save(commit=False)
             new_comment.post = post
             new_comment.save()
-            return HttpResponse(request.path_info)
         else:
             comment_form = CommentForm()
     return render(
@@ -41,14 +40,21 @@ def post_share(request,post_id):
         if form.is_valid():
             cd  = form.cleaned_data
             post_url = request.build_absolute_uri(post.get_absolute_url())
-            subject = f"{cd['name']} recomment you"
-            message = f"{post.title} in {post_url} just have look"
             send_mail(
-                subject,message,"Hellinet177@gmail.com",
-                [cd['to'],],
+                f"{cd['name']} recomment you",
+                f"{post.title} in {post_url} just have look",
+                "aliazimiali177@gmail.com",
+                auth_user="aliazimiali177@gmail.com",
+                recipient_list=[cd['to'],],
+                auth_password="dgizfaspmlrtxpze"
+
             )
         else:
             form = EmailPostForm()
     context = {'post':post,'form':form,}
     return render(request,"blog/share.html",context)
 
+def weblog(request):
+    posts  = Post.objects.filter(status='published')
+    context = {'posts':posts,}
+    return render(request,"blog/weblog.html",context)
